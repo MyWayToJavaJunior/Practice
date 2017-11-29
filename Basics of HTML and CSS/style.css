@@ -1,7 +1,7 @@
 body {
     font-family: Georgia;
     font-size: 16px;
-    margin: 0 auto;   /* center content */
+    margin: 35px;   /* center content */
     max-width: 800px; /* limit width */
     line-height: 1.5;
     padding-top: 32px;
