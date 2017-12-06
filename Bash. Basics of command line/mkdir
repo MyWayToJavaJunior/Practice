@@ -1,0 +1,2 @@
+mkdir -p example1/subexample/folder
+touch file
