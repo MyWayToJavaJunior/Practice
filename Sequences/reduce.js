@@ -3,7 +3,6 @@ export const reduce = (func, acc, elements) => {
     if (isEmpty(elements)) {
       return acc;
     }
-  
     return reduce(func, func(head(elements), acc), tail(elements));
   };
   
