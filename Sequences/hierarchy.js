@@ -6,7 +6,7 @@ import { is, toString as htmlToString, hasChildren, children, filter, reduce } f
 
 const select = (tagName, dom) => {
   const func = (element, acc) => {
-    const newAcc = (element, acc) => hasChildren(element) ? consList(select(tagName, children(element)), acc) : acc;
+    const newAcc = (element, acc) => hasChildren(element) ? concat(select(tagName, children(element)), acc) : acc;
     const result = (element, acc) => is(tagName, element) ? consList(element, newAcc(element, acc)) : newAcc(element, acc);
    return result(element, acc);
   };
@@ -14,3 +14,7 @@ const select = (tagName, dom) => {
 };
 export default select;
 // END
+const select = (tagName, html) => reduce((element, acc) => {
+  const acc2 = hasChildren(element) ? concat(select(tagName, children(element)), acc) : acc;
+  return is(tagName, element) ? consList(element, acc2) : acc2;
+}, l(), html);
