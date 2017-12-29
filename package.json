@@ -1,0 +1,31 @@
+{
+  "name": "helen_practice",
+  "version": "1.0.0",
+  "description": "practice",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "eslint": "eslint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/helenkyryliuk/Practice.git"
+  },
+  "author": "helenkyryliuk <helen.kyryliuk@gmail.com> (https://www.npmjs.com/~helen.kyryliuk)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/helenkyryliuk/Practice/issues"
+  },
+  "homepage": "https://github.com/helenkyryliuk/Practice#readme",
+  "dependencies": {
+    "hexlet-pairs-data": "*",
+    "hexlet-html-tags": "*"
+  },
+  "devDependencies": {
+    "eslint": "*",
+    "eslint-config-airbnb-base": "*",
+    "eslint-plugin-import": "*",
+    "eslint-plugin-jest": "*",
+    "eslint-plugin-flowtype": "*"
+  }
+}
