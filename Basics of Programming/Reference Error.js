@@ -1,6 +1,5 @@
 // BEGIN (write your solution here)
-export default () => {
-    return type;
-  };
-  // END
-  
+// const referenceError = () => {
+//  return type;
+// };
+// END

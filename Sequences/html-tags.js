@@ -1,4 +1,5 @@
-import { cons, car, cdr, toString as pairToString } from 'hexlet-pairs';
+import { cons, car, cdr } from 'hexlet-pairs';
+
 // eslint-disable-next-line
 import { l, isEmpty, head, tail, cons as consList, toString as listToString } from 'hexlet-pairs-data';
 
@@ -21,11 +22,11 @@ export const toString = (dom) => {
 };
 // END
 export const toString1 = (dom) => {
-    if (isEmpty(dom)) {
-      return '';
-    }
+  if (isEmpty(dom)) {
+    return '';
+  }
   const nameTag = name(head(dom));
   const valueTag = value(head(dom));
   const str = `<${nameTag}>${valueTag}</${nameTag}>`;
   return toString(tail(dom)) + str;
-  };
+};

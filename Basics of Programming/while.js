@@ -11,3 +11,4 @@ const smallestDivisor = (num) => {
   }
   return divisor;
 };
+export default smallestDivisor;

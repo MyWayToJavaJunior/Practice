@@ -19,7 +19,8 @@
   "homepage": "https://github.com/helenkyryliuk/Practice#readme",
   "dependencies": {
     "hexlet-pairs-data": "*",
-    "hexlet-html-tags": "*"
+    "hexlet-html-tags": "*",
+    "hexlet-pairs": "*"
   },
   "devDependencies": {
     "eslint": "*",
