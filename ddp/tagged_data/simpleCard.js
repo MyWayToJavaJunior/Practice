@@ -2,8 +2,9 @@ import { cons, car, cdr, toString as pairToString } from 'hexlet-pairs'; // esli
 import { attach, contents } from './type'; // eslint-disable-line
 
 // BEGIN (write your solution here)
-export const make = (name, damage) => attach('simpleCard', cons(name, damage));
-export const getName = self => car(contents(self));
-export const damage = self => cdr(contents(self));
+export const make = (name, damagePoints) => attach('SimpleCard', cons(name, damagePoints));
 
+export const getName = self => car(contents(self));
+
+export const damage = self => cdr(contents(self));
 // END

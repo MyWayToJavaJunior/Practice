@@ -13,18 +13,24 @@ const run = (player1, player2, cards, customRandom) => {
     if (health1 <= 0) {
       return consList(cons(car(head(log)), `${name1} был убит`), log);
     }
-    const card = random(cards);
-    const simpleCardName = getSimpleCardName(card);
-    const percentCardName = getPercentCardName(card);
 
-    const damageSimpleCard = simpleCardDamage(card);
-    const damagePercentCard = percentCardDamage(card)();
+    const card = customRandom(cards);
 
-    const newHealthSimple = health2 - simpleCardDamage(card);
-    const newHealthPercent = percentCardDamage(card)(health2);
+    let cardName;
+    let damage;
+    if (isSimpleCard(card)) {
+      cardName = getSimpleCardName(card);
+      damage = simpleCardDamage(card);
+    }
+    if (isPercentCard(card)) {
+      cardName = getPercentCardName(card);
+      damage = percentCardDamage(card, health2);
+    }
+
+    const newHealth = health2 - damage;
 
     const message = `Игрок '${name1}' применил '${cardName}'
-    против '${name2}' и нанес урон '${damage}'`;
+      против '${name2}' и нанес урон '${damage}'`;
     let stats;
     if (order === 1) {
       stats = cons(cons(health1, newHealth), message);
