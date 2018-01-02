@@ -19,8 +19,9 @@ const run = (player1, player2, cards, customRandom) => {
 
     const damageSimpleCard = simpleCardDamage(card);
     const damagePercentCard = percentCardDamage(card)();
-    const damage = cdr(card)();
-    const newHealth = health2 - damage;
+
+    const newHealthSimple = health2 - simpleCardDamage(card);
+    const newHealthPercent = percentCardDamage(card)(health2);
 
     const message = `Игрок '${name1}' применил '${cardName}'
     против '${name2}' и нанес урон '${damage}'`;
