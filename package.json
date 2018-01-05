@@ -28,13 +28,14 @@
   "devDependencies": {
     "babel-cli": "*",
     "babel-core": "*",
+    "babel-eslint": "*",
     "babel-preset-env": "*",
     "babel-preset-stage-0": "*",
-    "babel-eslint": "*",
     "eslint": "*",
     "eslint-config-airbnb-base": "*",
+    "eslint-plugin-flowtype": "*",
     "eslint-plugin-import": "*",
     "eslint-plugin-jest": "*",
-    "eslint-plugin-flowtype": "*"
+    "jest": "^22.0.4"
   }
 }
