@@ -1,5 +1,5 @@
-import { getMethod } from './generic'; // eslint-disable-line
-import { contents } from './type'; // eslint-disable-line
+import { getMethod } from './generic';
+import { contents } from './type';
 
 export const getName = self =>
   getMethod(self, 'getName')(contents(self));

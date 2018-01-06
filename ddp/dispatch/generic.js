@@ -1,6 +1,6 @@
-import { cons, car, cdr, toString as pairToString } from 'hexlet-pairs'; // eslint-disable-line
-import { l, cons as consList, isEmpty, head, tail } from 'hexlet-pairs-data'; // eslint-disable-line
-import { attach, typeTag, contents } from './type'; // eslint-disable-line
+import { cons, car, cdr } from 'hexlet-pairs';
+import { l, cons as consList, isEmpty, head, tail } from 'hexlet-pairs-data';
+import { attach, typeTag, contents } from './type';
 
 let methods = l();
 

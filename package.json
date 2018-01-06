@@ -2,10 +2,12 @@
   "name": "helen_practice",
   "version": "1.0.0",
   "description": "practice",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "jest --colors",
-    "eslint": "eslint"
+    "eslint": "eslint",
+    "babel-node": "babel-node",
+    "test:watch": "npm test -- --watch"
   },
   "jest": {
     "testEnvironment": "node"
