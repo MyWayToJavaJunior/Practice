@@ -1,14 +1,12 @@
 import { car, cdr, toString as pairToString } from 'hexlet-pairs'; // eslint-disable-line
 import { l, length, get } from 'hexlet-pairs-data'; // eslint-disable-line
-import SimpleCard from '../simpleCard'; // eslint-disable-line
-import PercentCard from '../percentCard'; // eslint-disable-line
-import make from '../solution'; // eslint-disable-line
+import SimpleCard from './simpleCard'; // eslint-disable-line
+import PercentCard from './percentCard'; // eslint-disable-line
+import make from './solution'; // eslint-disable-line
 
 describe('CardGame', () => {
   it('#flow 1', () => {
-    const cards = l(
-      SimpleCard('Королевский хлыст шанса', 6),
-    );
+    const cards = l(SimpleCard('Королевский хлыст шанса', 6));
     const game = make(cards);
     const log = game('John', 'Ada');
 
