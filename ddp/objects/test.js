@@ -1,8 +1,8 @@
 import { car, toString as pairToString } from 'hexlet-pairs'; // eslint-disable-line
 import { l, length, get } from 'hexlet-pairs-data'; // eslint-disable-line
-import simpleCard from '../simpleCard'; // eslint-disable-line
-import percentCard from '../percentCard'; // eslint-disable-line
-import make from '../solution'; // eslint-disable-line
+import simpleCard from './simpleCard'; // eslint-disable-line
+import percentCard from './percentCard'; // eslint-disable-line
+import make from './solution'; // eslint-disable-line
 
 describe('CardGame', () => {
   it('#flow 1', () => {
