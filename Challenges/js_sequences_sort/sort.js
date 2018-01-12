@@ -8,8 +8,9 @@ const sort = (list) => {
   const first = head(list);
   const left = filter(element => element < first, tail(list));
   const right = filter(element => element >= first, tail(list));
-  const leftFirst = concat(left, l(first));
-  return concat(leftFirst, right);
+
+  return concat(sort(left), concat(l(first), sort(right)));
 };
 export default sort;
 // END
+
