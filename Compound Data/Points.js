@@ -1,5 +1,5 @@
+import { makePoint, getX, getY } from 'hexlet-points';
 // BEGIN (write your solution here)
-
 export const quadrant = (point) => {
   const x = getX(point);
   const y = getY(point);
@@ -11,9 +11,8 @@ export const quadrant = (point) => {
     return 2;
   } else if (x < 0 && y < 0) {
     return 3;
-  } else if (x > 0 && y < 0) {
-    return 4;
   }
+  return 4;
 };
 export const symmetricalPoint = (point) => {
   const x = getX(point);
