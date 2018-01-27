@@ -8,9 +8,7 @@ const findPrimitiveBox = (pair) => {
   if (isPair(car(pair)) === false) {
     return findPrimitiveBox(cdr(pair));
   }
-  if (isPair(cdr(pair)) === false) {
-    return findPrimitiveBox(car(pair));
-  }
+  return findPrimitiveBox(car(pair));
 };
 const findPrimitiveBox1 = (pair) => {
   const first = car(pair);
