@@ -7,14 +7,18 @@ export const numer = pair => car(pair);
 export const denom = pair => cdr(pair);
 export const toString = pair => `${numer(pair)} / ${denom(pair)}`;
 export const isEqual = (pair1, pair2) => {
-  return (numer(pair1) * denom(pair2)) === (numer(pair2) * denom(pair1));
+  const result = (numer(pair1) * denom(pair2)) === (numer(pair2) * denom(pair1));
+  return result;
 };
 export const add = (pair1, pair2) => {
   const numerpair3 = (numer(pair1) * denom(pair2)) + (numer(pair2) * denom(pair1));
   const denompair3 = denom(pair2) * denom(pair1);
   return make(numerpair3, denompair3);
 };
-export const sub = (num1, num2) => make(((numer(num1) * denom(num2)) - (denom(num1) * numer(num2))), (denom(num1) * denom(num2)));
+export const sub = (num1, num2) => {
+  const point1 = (numer(num1) * denom(num2)) - (denom(num1) * numer(num2));
+  return make(point1, (denom(num1) * denom(num2)));
+};
 export const mul = (num1, num2) => make((numer(num1) * numer(num2)), (denom(num1) * denom(num2)));
 export const div = (num1, num2) => make((numer(num1) * denom(num2)), (denom(num1) * numer(num2)));
 // END
