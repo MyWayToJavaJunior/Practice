@@ -27,9 +27,7 @@ describe('CardGame', () => {
   });
 
   it('should work 2', () => {
-    const cards = l(
-      cons('Разъяряющая осада отчаяния', () => 5),
-    );
+    const cards = l(cons('Разъяряющая осада отчаяния', () => 5));
     const game = make(cards);
     const log = game('Mike', 'Alan');
 

@@ -11,7 +11,7 @@ const run = (player1, player2, cards) => {
       const logItem = cons(cons(health1, health2), `${name1} был убит`);
       return (consList(logItem, log));
     }
-    let newOrder = order === 1 ? 2 : 1;
+    const newOrder = order === 1 ? 2 : 1;
     if (newOrder === 2) {
       const card = random(cards);
       const cardName = car(card);

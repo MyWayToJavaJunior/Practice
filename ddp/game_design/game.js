@@ -32,10 +32,10 @@ const run = (player1, player2, cards) => {
   const iter = (health1, name1, health2, name2, order, log) => {
     // BEGIN (write your solution here)
     if (health2 <= 0) {
-      const logItem = cons(cons(health1, health2), `${name2} был убит` );
+      const logItem = cons(cons(health1, health2), `${name2} был убит`);
       return (consList(logItem, log));
     } else if (health1 <= 0) {
-      const logItem = cons(cons(health1, health2), `${name1} был убит` );
+      const logItem = cons(cons(health1, health2), `${name1} был убит`);
       return (consList(logItem, log));
     }
     const newOrder = order === 1 ? 2 : 1;
