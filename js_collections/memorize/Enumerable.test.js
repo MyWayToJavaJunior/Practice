@@ -31,10 +31,10 @@ describe('HexletLinq', () => {
     const result2 = coll
       .orderBy(car => car.year, 'asc')
       .where(car => car.model === 'sorento');
-    expect(result2.length).toBe(1);
-    expect(result2.length).toBe(1);
+    expect(result2.length).toHaveLength(1);
+    expect(result2.length).toHaveLength(1);
 
-    expect(result.length).toBe(2);
+    expect(result.length).toHaveLength(2);
     expect(result.toArray()).toEqual(result.memo);
     expect(result.toArray()).toEqual([cars[2], cars[4]]);
   });
@@ -44,14 +44,14 @@ describe('HexletLinq', () => {
       .where(car => car.brand === 'kia')
       .where(car => car.year > 2011);
 
-    expect(result.length).toBe(2);
+    expect(result.length).toHaveLength(2);
     expect(result.toArray()).toEqual([cars[2], cars[4]]);
   });
 
   it('#select', () => {
     const result = coll.where(car => car.brand === 'bmw').select(car => car.model);
 
-    expect(result.length).toBe(2);
+    expect(result.length).toHaveLength(2);
     expect(result.toArray()).toEqual(result.memo);
   });
 
@@ -60,14 +60,14 @@ describe('HexletLinq', () => {
       .where(car => car.brand === 'kia')
       .select(car => car.model);
 
-    expect(result.length).toBe(3);
+    expect(result.length).toHaveLength(3);
     expect(result.toArray()).toEqual(['rio', 'sportage', 'sorento']);
 
     const result2 = coll.orderBy(car => car.year, 'desc')
       .where(car => car.brand === 'kia')
       .select(car => car.model);
 
-    expect(result2.length).toBe(3);
+    expect(result2.length).toHaveLength(3);
     expect(result2.toArray()).toEqual(result2.memo);
   });
 });

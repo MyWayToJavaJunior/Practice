@@ -1,11 +1,21 @@
 import objectify from './objectify';
 
 const cars = [
-  { id: 1, brand: 'bmw', model: 'm5', year: 2014 },
-  { id: 8, brand: 'bmw', model: 'm4', year: 2013 },
-  { id: 100, brand: 'kia', model: 'sorento', year: 2014 },
-  { id: 93, brand: 'kia', model: 'rio', year: 2010 },
-  { id: 70, brand: 'kia', model: 'sportage', year: 2012 },
+  {
+    id: 1, brand: 'bmw', model: 'm5', year: 2014,
+  },
+  {
+    id: 8, brand: 'bmw', model: 'm4', year: 2013,
+  },
+  {
+    id: 100, brand: 'kia', model: 'sorento', year: 2014,
+  },
+  {
+    id: 93, brand: 'kia', model: 'rio', year: 2010,
+  },
+  {
+    id: 70, brand: 'kia', model: 'sportage', year: 2012,
+  },
 ];
 
 const cars2 = [
@@ -20,11 +30,21 @@ test('objectify', () => {
   const actual1 = objectify(cars, car => car.id);
 
   const expected1 = {
-    1: { brand: 'bmw', id: 1, model: 'm5', year: 2014 },
-    100: { brand: 'kia', id: 100, model: 'sorento', year: 2014 },
-    70: { brand: 'kia', id: 70, model: 'sportage', year: 2012 },
-    8: { brand: 'bmw', id: 8, model: 'm4', year: 2013 },
-    93: { brand: 'kia', id: 93, model: 'rio', year: 2010 },
+    1: {
+      brand: 'bmw', id: 1, model: 'm5', year: 2014,
+    },
+    100: {
+      brand: 'kia', id: 100, model: 'sorento', year: 2014,
+    },
+    70: {
+      brand: 'kia', id: 70, model: 'sportage', year: 2012,
+    },
+    8: {
+      brand: 'bmw', id: 8, model: 'm4', year: 2013,
+    },
+    93: {
+      brand: 'kia', id: 93, model: 'rio', year: 2010,
+    },
   };
 
   expect(actual1).toEqual(expected1);

@@ -1,3 +1,4 @@
+import { makePoint, getX, getY } from 'hexlet-points';
 import { cons, car, cdr } from 'hexlet-pairs';
 // BEGIN (write your solution here)
 

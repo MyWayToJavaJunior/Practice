@@ -10,8 +10,12 @@ export const has = (list, element) => {
   return has(tail(list), element);
 };
 export const reverse = (list) => {
-  const iter = (items, acc) => isEmpty(items) ? acc : iter(tail(items), cons(head(items), acc));
-}
+  const iter = (items, acc) => {
+    if (isEmpty(items)) {
+      return acc;
+    }
+    return iter(tail(items), cons(head(items), acc));
+  };
   return iter(list, l());
 };
 export const concat = (list1, list2) => {
