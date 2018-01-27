@@ -25,7 +25,8 @@
   "dependencies": {
     "hexlet-pairs-data": "*",
     "hexlet-html-tags": "*",
-    "hexlet-pairs": "*"
+    "hexlet-pairs": "*",
+    "hexlet-points": "*"
   },
   "devDependencies": {
     "babel-cli": "*",

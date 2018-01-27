@@ -1,5 +1,6 @@
+import { cons, car, cdr } from 'hexlet-pairs';
 // BEGIN (write your solution here)
-const reversePair = (pair) => {
-    return cons(cdr(pair), car(pair));
-  };
-  // END
+const reversePair = pair => cons(cdr(pair), car(pair));
+
+export default reversePair;
+// END
