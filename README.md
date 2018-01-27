@@ -1,2 +1,2 @@
 [![Build Status](https://travis-ci.org/helenkyryliuk/Practice.svg?branch=master)](https://travis-ci.org/helenkyryliuk/Practice)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/480fd4f72d7bef085c00/test_coverage)](https://codeclimate.com/github/helenkyryliuk/Practice/test_coverage)
+[![Maintainability](https://api.codeclimate.com/v1/badges/480fd4f72d7bef085c00/maintainability)](https://codeclimate.com/github/helenkyryliuk/Practice/maintainability)
